@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI Calculator</title>
+    <style>
+        .button{
+        margin-top: 25px;
+        margin-left: 150px;
+        position:relative}
+        .form{
+        margin: center;
+        text align: center}
+    </style>
+</head>
+<body>
+<div class="form">
+<form method="post" action="result">
+    <label>Height</label>
+    <input id="height" name="height" placeholder="Enter your height in cm" th:objekt="${height}"/>
+    <label>Weight</label>
+    <input id="weight" name="weight" placeholder="Enter your weight" th:objekt="${weight}"/>
+    <div> <button class="button" type="submit">Calculate Now</button>
+    </div>
+</form>
+</div>
+</body>
+</html>
