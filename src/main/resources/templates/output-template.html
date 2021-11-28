@@ -3,12 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Your BMI Calculator</title>
+    <style>
+        body{
+        background-image: url('https://www.jolie.de/sites/default/files/styles/image870w/public/images/2018/02/02/bmi-body-mass-index.webp?itok=Bw3phlIz');
+       }
+       .result{
+        text-align:center;
+        width:auto;
+        font-size:30px;
+       }
+    </style>
 </head>
 <body>
-<tr>
-    <td th:text="${bmi}"></td>
+<div class="result">
+    <label>Result = </label>
+    <td class="result" th:text="${bmi}"></td>
 
-</tr>
+</div>
 
 
 </body>

@@ -4,25 +4,45 @@
     <meta charset="UTF-8">
     <title>BMI Calculator</title>
     <style>
+        .input{
+         font-size:20px}
+        }
         .button{
-        margin-top: 25px;
-        margin-left: 150px;
-        position:relative}
+        margin-top:50px;
+        position:relative;
+        font-size:30px}
+
         .form{
-        margin: center;
-        text align: center}
+        margin-top: 50px;
+        text-align: center;
+        background-color:pink;
+        }
+
+        body{
+        width:auto;
+        font-size:30px;
+        background-image: url('https://www.jolie.de/sites/default/files/styles/image870w/public/images/2018/02/02/bmi-body-mass-index.webp?itok=Bw3phlIz');
+       }
+       button{
+       font-size:20px;
+       }
+
+
     </style>
 </head>
 <body>
-<div class="form">
-<form method="post" action="result">
-    <label>Height</label>
-    <input id="height" name="height" placeholder="Enter your height in cm" th:objekt="${height}"/>
-    <label>Weight</label>
-    <input id="weight" name="weight" placeholder="Enter your weight" th:objekt="${weight}"/>
-    <div> <button class="button" type="submit">Calculate Now</button>
+<div class="background">
+    <div class="form">
+        <form method="post" action="result">
+            <label>Height</label>
+            <input class="input" id="height" name="height" placeholder="Enter your height in Cm" th:objekt="${height}"/>
+            <label>Weight</label>
+            <input class="input" id="weight" name="weight" placeholder="Enter your weight in Kg" th:objekt="${weight}"/>
+            <div>
+                <button class="button" type="submit">Calculate Now</button>
+            </div>
+        </form>
     </div>
-</form>
 </div>
 </body>
 </html>
