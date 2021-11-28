@@ -12,6 +12,12 @@ public class BMIController {
     private double weight;
     private double bmi = weight / height / height;
 
+    @GetMapping("/")
+    public String calculate2(Model model) {
+        model.addAttribute("height", height);
+        model.addAttribute("weight", weight);
+        return "input-template";
+    }
 
     @GetMapping("calculate")
     public String calculate(Model model) {
